@@ -56,7 +56,7 @@ public class Percobaan1 {
         } else if (nilaiAkhir > 50 && nilaiAkhir <= 60) {
             nilaiHuruf = "C";
             System.out.println("Selamat anda lulus");
-        } else if (nilaiAkhir > 30 && nilaiAkhir <= 50) {
+        } else if (nilaiAkhir > 39 && nilaiAkhir <= 50) {
             nilaiHuruf = "D";
             System.out.println("maaf anda tidak lulus");
         } else {
