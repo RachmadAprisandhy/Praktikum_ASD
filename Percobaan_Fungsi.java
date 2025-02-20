@@ -10,10 +10,8 @@ public class Percobaan_Fungsi {
     public static void main(String[] args) {
         Scanner scanner18 = new Scanner(System.in);
 
-       
         String[] dataToko = {"RoyalGarden 1", "RoyalGarden 2", "RoyalGarden 3", "RoyalGarden 4"};
 
-        
         int[][] stok = {
             {10, 5, 15, 7},  
             {6, 11, 9, 12},  
@@ -27,7 +25,8 @@ public class Percobaan_Fungsi {
             System.out.println("Pilih menu yang anda inginkan:");
             System.out.println("1. Tampilkan data pendapatan");
             System.out.println("2. Tampilkan stok tiap cabang");
-            System.out.println("3. Keluar");
+            System.out.println("3. Tampilkan stok setelah pengurangan di RoyalGarden 4");
+            System.out.println("4. Keluar");
             System.out.print("Pilihan Anda: ");
 
             pilihan = scanner18.nextInt();
@@ -41,17 +40,19 @@ public class Percobaan_Fungsi {
                     tampilkanStok(dataToko, stok);
                     break;
                 case 3:
+                    tampilkanStokRoyalGarden4SetelahPengurangan(stok);
+                    break;
+                case 4:
                     System.out.println("Keluar dari menu");
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.");
             }
-        } while (pilihan != 3);
+        } while (pilihan != 4);
 
         scanner18.close();
     }
 
-   
     public static void tampilkanStok(String[] cabang, int[][] stok) {
         System.out.println("\nStok setiap cabang:");
         for (int i = 0; i < stok.length; i++) {
@@ -71,5 +72,20 @@ public class Percobaan_Fungsi {
                              (stok[i][3] * HARGA_MAWAR);
             System.out.println(cabang[i] + ": Rp " + pendapatan);
         }
+    }
+
+    public static void tampilkanStokRoyalGarden4SetelahPengurangan(int[][] stok) {
+        int[] pengurangan = {-1, -2, 0, -5}; 
+        
+        int aglonema = stok[3][0] + pengurangan[0];
+        int keladi = stok[3][1] + pengurangan[1];
+        int alocasia = stok[3][2] + pengurangan[2];
+        int mawar = stok[3][3] + pengurangan[3];
+
+        System.out.println("\nStok Royal Garden 4 setelah pengurangan:");
+        System.out.println("Aglonema: " + aglonema);
+        System.out.println("Keladi: " + keladi);
+        System.out.println("Alocasia: " + alocasia);
+        System.out.println("Mawar: " + mawar);
     }
 }
