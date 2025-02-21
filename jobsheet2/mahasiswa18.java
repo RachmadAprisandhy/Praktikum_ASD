@@ -11,7 +11,7 @@ public class mahasiswa18 {
         System.out.println("Nama :"+ nama);
         System.out.println("NIM  :"+ NIM);
         System.out.println("Kelas:"+ Kelas);
-        System.out.println("IPK  :"+ nama);
+        System.out.println("IPK  :"+ IPK);
     }
     void ubahkelas(String KelasBaru){
         Kelas = KelasBaru;
@@ -33,5 +33,17 @@ public class mahasiswa18 {
         }else{
             return"kinerja Kurang";
         }
+    }
+
+    public mahasiswa18 (){
+
+    }
+
+    public mahasiswa18 (String nm, String NIM, double IPK , String kls){
+        nama = nm;
+        this.NIM = NIM;
+        this.IPK = IPK;
+        Kelas = kls;
+
     }
 }
