@@ -16,5 +16,7 @@ public class Dosen18 {
         System.out.println("Jenis Kelamin: " + (jenisKelamin ? "Laki-laki" : "Perempuan"));
         System.out.println("Usia: " + usia);
         System.out.println("--------------------------");
-    }
+    }        
+    
 }
+
