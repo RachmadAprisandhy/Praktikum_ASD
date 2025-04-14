@@ -1,6 +1,11 @@
 public class MahasiswaBerprestasi18{
-    Mahasiswa18 [] listMahasiswa = new Mahasiswa18[5];
-    int idx;
+        Mahasiswa18[] listMahasiswa;
+        int idx;
+    
+        public MahasiswaBerprestasi18(int jumlah) {
+            listMahasiswa = new Mahasiswa18[jumlah];
+            idx = 0;
+        }
 
     void tampil() {
         for (int i = 0; i < idx; i++) {
@@ -53,7 +58,7 @@ public class MahasiswaBerprestasi18{
             mid = (left+right)/2;
             if (cari == listMahasiswa[mid].ipk){
                 return (mid);
-            }else if(listMahasiswa[mid].ipk>cari){
+            }else if(listMahasiswa[mid].ipk<cari){
                 return findBinarrySearch(cari, left, mid -1);
             }else{
                 return findBinarrySearch(cari, mid+1, right);
