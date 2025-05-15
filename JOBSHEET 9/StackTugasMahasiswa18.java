@@ -27,7 +27,6 @@ public  class StackTugasMahasiswa18 {
     }
 
     public void push(Mahasiswa18 mhs) {
-    
     if (!isFull()) {
         top++;
         stack[top] = mhs;
@@ -74,7 +73,7 @@ public int jumlahTugas() {
 
 public String KonversiDesimalKeBinner (int nilai){
     StackKonversi18 stackBiner = new StackKonversi18(32); 
-    while (nilai > 0) {
+    while (nilai !=0) {
         int sisa = nilai % 2;
         stackBiner.push(sisa);
         nilai = nilai / 2;
