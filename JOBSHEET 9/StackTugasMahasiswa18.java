@@ -1,3 +1,5 @@
+
+
 public  class StackTugasMahasiswa18 {
     Mahasiswa18[] stack;
     int top;
@@ -68,5 +70,19 @@ public Mahasiswa18 palingbawah() {
 }
 public int jumlahTugas() {
     return top + 1; 
+}
+
+public String KonversiDesimalKeBinner (int nilai){
+    StackKonversi18 stackBiner = new StackKonversi18(32); 
+    while (nilai > 0) {
+        int sisa = nilai % 2;
+        stackBiner.push(sisa);
+        nilai = nilai / 2;
+    }
+    String biner = new String();
+    while (!stackBiner.isEmpty()) {
+        biner += stackBiner.pop();
+    }
+    return biner;
 }
 }
