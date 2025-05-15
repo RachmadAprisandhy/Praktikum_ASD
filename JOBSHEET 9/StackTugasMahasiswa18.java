@@ -1,7 +1,7 @@
 public  class StackTugasMahasiswa18 {
-    private Mahasiswa18[] stack;
-    private int top;
-    private int Size;
+    Mahasiswa18[] stack;
+    int top;
+    int Size;
 
     public StackTugasMahasiswa18(int size) {
        this.Size = size;
@@ -57,4 +57,16 @@ public Mahasiswa18 peek() {
     }
     System.err.println("");
     }
+
+public Mahasiswa18 palingbawah() {
+    if (!isEmpty()) {
+        return stack[0];
+    } else {
+        System.out.println("Stack kosong! Tidak ada tugas.");
+        return null;
+    }
+}
+public int jumlahTugas() {
+    return top + 1; 
+}
 }
