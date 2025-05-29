@@ -12,7 +12,8 @@ public class LayananAkademikSiakad18 {
             System.out.println("3. lihat Mahasiswa Terdepan");
             System.out.println("4. lihat semua antrian");
             System.out.println("5. jumlah mahasiswa dalam antrian");
-            System.out.println("6. Keluar");
+            System.out.println("6. cek antrian paling belakang");
+            System.out.println("7. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
             sc.nextLine();
@@ -46,8 +47,11 @@ public class LayananAkademikSiakad18 {
             case 5:
                 System.out.println("Jumlah dalam antrian: " + antrian.getJumlahAntrian());
                 break;
-            case 6:
-                System.out.println("Terima kasih telah");
+           case 6:
+                antrian.LihatAkhir();
+                break;
+            case 7:
+                System.out.println("Terima kasih telah menggunakan layanan.");
                 break;
             default:
                 System.out.println("Pilihan tidak valid");
