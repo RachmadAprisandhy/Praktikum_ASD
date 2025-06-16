@@ -57,13 +57,17 @@ public class DoubleLinkedList18 {
         }
     }
 
-    public void print () {
-        Node18 current = head;
-        while (current != null) {
-            current.data.tampil();
-            current = current.next;
-        }
+   public void print () {
+    if (isEmpty()) {
+        System.out.println("List masih kosong.");
+        return;
     }
+    Node18 current = head;
+    while (current != null) {
+        current.data.tampil();
+        current = current.next;
+    }
+}
      public Node18 search(String nim) {
     Node18 current = head;
     while (current != null) {
@@ -77,7 +81,7 @@ public class DoubleLinkedList18 {
 public void removeFirst() {
     if (isEmpty()) {
         System.out.println("List kosong, tidak bisa menghapus.");
-    } else if (head == tail) {
+    } if (head == tail) {
         head = tail = null;
     } else {
         head = head.next;
@@ -89,7 +93,7 @@ public void removeFirst() {
 public void removeLast() {
     if (isEmpty()) {
         System.out.println("List kosong, tidak bisa menghapus.");
-    } else if (head == tail) {
+    } if (head == tail) {
 
         head = tail = null;
     } else {
